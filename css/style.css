@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #262932;
+    --dark-color: #191c23;
+    --accent-color: #924a4b;
+    --light-color: snow;
+    --secondary-color: #235053;
+    --border-raduis-tiny: 0.12rem;
+    --border-raduis-xs: 0.25rem;
+    --border-raduis-sm: 0.5rem;
+    --border-raduis-md: 1rem;
+    --border-raduis-lg: 1.5rem;
+    --border-raduis-xl: 2rem;
+    --border-raduis-2xl: 2.5rem;
+    --border-raduis-3xl: 3rem;
+    --font-size-sm: 0.75rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 4rem;
+    --font-size-4xl: 6rem;
+    --font-size-5xl: 8rem;
+}
+
+
+/* px , rem , em, pt, percent */
+
+html {
+    font-size: 62.5%;
+    font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.5rem;
+    background: #14141f;
+    color: var(--light-color);
+    direction: ltr;
+}
+
+button,
+span,
+input[type="text"]::placeholder {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 7rem;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.title h2 {
+    font-size: var(--font-size-3xl);
+    font-family: 'Urbanist', sans-serif;
+}
+
+.title p {
+    border-bottom: 2px solid #4C2566;
+}
+
+.light__theme {
+    --light-color: #030303!important;
+    --dark-color: #f7f7f7!important;
+    --primary-color: #f7f7f7!important;
+}
+
+.light__theme body {
+    background: #fff!important;
+}
+
+.light__theme .btn__primary:hover {
+    color: var(--dark-color);
+}
+
+@media only screen and (max-width:767px) {
+    .container {
+        padding: 0 3.7rem;
+    }
+}
+
+.phone {
+    width: 90%;
+    max-width: 380px;
+    margin: 0 auto;
+    border-radius: var(--border-raduis-2xl);
+    background-color: var(--primary-color);
+    padding: 0 1rem;
+}
+
+.phone__bar {
+    background-color: var(--dark-color);
+    height: 5rem;
+    width: 100%;
+}
+
+.phone__top {
+    background-color: var(--dark-color);
+    height: 20rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem;
+}
+
+.phone__bottom {
+    height: 40rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-size: 1.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: var(--border-raduis-xs);
+    transition: background-color 0.5s;
+}
+
+.btn:hover {
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.mainKey {
+    color: var(--accent-color);
+}
+
+.calInput {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    flex-grow: 1;
+    height: 3rem;
+    font-size: var(--font-size-2xl);
+    text-align: right;
+    color: var(--light-color);
+}
+
+.calInput::placeholder {
+    color: var(--secondary-color);
+}
