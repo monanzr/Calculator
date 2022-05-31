@@ -24,7 +24,7 @@ numberKeys.forEach((element) => {
 
 operatorKey.forEach((operator) => {
     operator.addEventListener("click", () => {
-        calInput.value = numInput.value + operator.textContent;
+        calInput.value += operator.textContent;
         numInput.value = "";
     });
 });
