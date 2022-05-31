@@ -31,6 +31,8 @@ operatorKey.forEach((operator) => {
 
 percentageKey.addEventListener("click", () => {
     calInput.value = calInput.value / 100;
+    numInput.value = numInput.value / 100;
+    calInput.value = "";
 })
 
 signKey.addEventListener("click", () => {
