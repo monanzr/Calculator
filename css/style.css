@@ -12,9 +12,15 @@
 :root {
     --primary-color: #262932;
     --dark-color: #191c23;
-    --accent-color: #924a4b;
+    --accent-color: #e06765;
     --light-color: snow;
     --secondary-color: #235053;
+
+    --light-color-2: rgb(246, 246, 246);
+    --dark-color-2: rgb(233, 233, 233);;
+    --primary-color-2: #fff;
+
+
     --border-raduis-tiny: 0.12rem;
     --border-raduis-xs: 0.25rem;
     --border-raduis-sm: 0.5rem;
@@ -38,13 +44,13 @@
 
 html {
     font-size: 62.5%;
-    font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Yantramanav", "Poppins", Tahoma, Geneva, Verdana, sans-serif;
     scroll-behavior: smooth;
 }
 
 body {
     font-size: 1.5rem;
-    background: #14141f;
+    background: var(--dark-color-2);
     color: var(--light-color);
     direction: ltr;
 }
@@ -97,20 +103,6 @@ img {
     border-bottom: 2px solid #4C2566;
 }
 
-.light__theme {
-    --light-color: #030303!important;
-    --dark-color: #f7f7f7!important;
-    --primary-color: #f7f7f7!important;
-}
-
-.light__theme body {
-    background: #fff!important;
-}
-
-.light__theme .btn__primary:hover {
-    color: var(--dark-color);
-}
-
 @media only screen and (max-width:767px) {
     .container {
         padding: 0 3.7rem;
@@ -119,27 +111,97 @@ img {
 
 .phone {
     width: 90%;
-    max-width: 380px;
+    max-width: 360px;
     margin: 0 auto;
     border-radius: var(--border-raduis-2xl);
     background-color: var(--primary-color);
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
+    margin: 3rem auto 3rem;
+    box-shadow: rgb(0 0 0 / 35%) 0px 40px 35px 5px;
 }
 
 .phone__bar {
     background-color: var(--dark-color);
-    height: 5rem;
+    height: 3rem;
     width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    border-radius: var(--border-raduis-2xl);
+    padding: 0.5rem 1rem;
+}
+
+.bar__icon {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0px 1rem;
+}
+
+.bar__icon i {
+    font-size: 13px;
+}
+
+.bar__notch {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 16rem;
+    background-color: var(--dark-color-2);
+    border-top: 6px solid var(--dark-color-2);
+    height: 22px;
+    z-index: 3;
+    border-radius: 0 0 20px 20px;
+}
+
+.bar__clock {
+    padding: 0 0.5rem;
+}
+
+.bar__clock span {
+    font-size: 13px;
+}
+
+.theme {
+    display: flex;
+    justify-content: center;
+    height: 7rem;
+    padding: 1rem;
+    background-color: var(--dark-color);
+}
+
+.theme__box {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    height: 4.5rem;
+    border-radius: var(--border-raduis-2xl);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.theme__box i {
+    font-size: 2.5rem;
+}
+
+.btn__light {
+    color: #a7a7a7;
+}
+
+.btn__dark {
+    color: var(--light-color)
 }
 
 .phone__top {
     background-color: var(--dark-color);
-    height: 20rem;
+    height: 15rem;
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    flex-direction: column;
 }
 
 .phone__bottom {
@@ -148,38 +210,105 @@ img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    padding: 1rem 2rem;
 }
 
 .btn {
     border: none;
     background-color: transparent;
     color: inherit;
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-weight: 600;
     cursor: pointer;
-    border-radius: var(--border-raduis-xs);
     transition: background-color 0.5s;
+    border-radius: var(--border-raduis-lg);
+    transition: all 0.4s;
 }
 
 .btn:hover {
     background-color: rgb(0, 0, 0, 0.3);
+    border-radius: var(--border-raduis-lg);
+    color: var(--light-color);
 }
 
 .mainKey {
     color: var(--accent-color);
+    background-color: var(--dark-color);
+}
+.topKey {
+    color: var(--secondary-color);
+}
+
+.numInput {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    height: 5rem;
+    font-size: var(--font-size-3xl);
+    text-align: right;
+    color: var(--light-color);
+    width: 100%;
 }
 
 .calInput {
     border: none;
     outline: none;
     background-color: transparent;
-    flex-grow: 1;
-    height: 3rem;
+    height: 5rem;
     font-size: var(--font-size-2xl);
     text-align: right;
+    color: var(--light-color);
+    width: 100%;
+}
+
+.numInput::placeholder {
     color: var(--light-color);
 }
 
 .calInput::placeholder {
     color: var(--secondary-color);
+}
+
+.phone__line {
+    position: relative;
+    height: 4rem;
+    border-bottom-left-radius: var(--border-raduis-2xl);
+    border-bottom-right-radius: var(--border-raduis-2xl);
+}
+
+.phone__line:before {
+    content: "";
+    background-color: #c8c8c8;
+    bottom: 1.25rem;
+    left: 19%;
+    top: 17px;
+    height: 5px;
+    width: 60%;
+    border-radius: 5px;
+    position: absolute;
+}
+
+/*------ light theme -----*/
+
+.light__theme .phone, .light__theme .phone__top, .light__theme .theme, .light__theme .phone__bar {
+    background-color: var(--primary-color-2);
+    color: var(--dark-color);
+}
+
+.light__theme .phone__bottom, .light__theme .phone__line {
+    background-color: var(--light-color-2);
+}
+
+.light__theme .numInput::placeholder {
+    color: var(--dark-color);
+}
+
+.light__theme .theme__box, .light__theme .mainKey {
+    background-color: var(--dark-color-2);
+}
+
+.light__theme .btn:hover {
+    background-color: rgb(0, 0, 0, 0.3);
+    border-radius: var(--border-raduis-lg);
+    color: var(--light-color);
 }
