@@ -129,6 +129,8 @@ img {
     justify-content: space-between;
     border-radius: var(--border-raduis-2xl);
     padding: 0.5rem 1rem;
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: unset;
 }
 
 .bar__icon {
