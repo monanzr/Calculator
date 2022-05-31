@@ -118,6 +118,7 @@ img {
     /* padding: 0 1rem; */
     margin: 3rem auto 3rem;
     box-shadow: rgb(0 0 0 / 35%) 0px 40px 35px 5px;
+    overflow: hidden;
 }
 
 .phone__bar {
