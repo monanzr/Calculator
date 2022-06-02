@@ -1,3 +1,5 @@
+'use strict';
+
 document.querySelector(".light__mood").addEventListener("click", function() {
     document.querySelector("html").classList.add("light__theme");
 });
@@ -13,6 +15,8 @@ const cleanKey = document.querySelector(".cleanKey");
 const operatorKey = document.querySelectorAll(".operatorKey");
 const percentageKey = document.querySelector(".percentageKey");
 const signKey = document.querySelector(".signKey");
+const decimalKey = document.querySelector(".decimalKey");
+let decimalAllowed = true;
 
 numberKeys.forEach((element) => {
     element.addEventListener("click", () => {
@@ -21,10 +25,20 @@ numberKeys.forEach((element) => {
     });
 });
 
+decimalKey.addEventListener("click", () => {
+    if (decimalAllowed === true) {
+        calInput.value += ".";
+        numInput.value += ".";
+        decimalAllowed = false;
+    }
+});
+
+
 operatorKey.forEach((operator) => {
     operator.addEventListener("click", () => {
         calInput.value += operator.textContent;
         numInput.value = "";
+        decimalAllowed = true;
     });
 });
 
