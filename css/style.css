@@ -15,10 +15,19 @@
     --accent-color: #e06765;
     --light-color: snow;
     --secondary-color: #235053;
+<<<<<<< HEAD
     --light-color-2: rgb(246, 246, 246);
     --dark-color-2: rgb(233, 233, 233);
     ;
     --primary-color-2: #fff;
+=======
+
+    --light-color-2: rgb(246, 246, 246);
+    --dark-color-2: rgb(233, 233, 233);;
+    --primary-color-2: #fff;
+
+
+>>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
     --border-raduis-tiny: 0.12rem;
     --border-raduis-xs: 0.25rem;
     --border-raduis-sm: 0.5rem;
@@ -82,6 +91,34 @@ img {
     padding: 0 7rem;
 }
 
+<<<<<<< HEAD
+=======
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.title h2 {
+    font-size: var(--font-size-3xl);
+    font-family: 'Urbanist', sans-serif;
+}
+
+.title p {
+    border-bottom: 2px solid #4C2566;
+}
+
+@media only screen and (max-width:767px) {
+    .container {
+        padding: 0 3.7rem;
+    }
+}
+
+>>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
 .phone {
     width: 90%;
     max-width: 360px;
@@ -90,7 +127,11 @@ img {
     background-color: var(--primary-color);
     /* padding: 0 1rem; */
     margin: 3rem auto 3rem;
+<<<<<<< HEAD
     box-shadow: rgb(0 0 0 / 20%) 0px 40px 34px 5px;
+=======
+    box-shadow: rgb(0 0 0 / 35%) 0px 40px 35px 5px;
+>>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
     overflow: hidden;
 }
 
@@ -123,7 +164,11 @@ img {
     top: 0px;
     left: 50%;
     transform: translate(-50%);
+<<<<<<< HEAD
     width: 50%;
+=======
+    width: 16rem;
+>>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
     background-color: var(--dark-color-2);
     border-top: 6px solid var(--dark-color-2);
     height: 22px;
@@ -133,18 +178,24 @@ img {
 
 .bar__clock {
     padding: 0 0.5rem;
+<<<<<<< HEAD
     display: flex;
     align-items: center;
+=======
+>>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
 }
 
 .bar__clock span {
     font-size: 13px;
 }
 
+<<<<<<< HEAD
 #clock__divider {
     padding-left: 3px;
 }
 
+=======
+>>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
 .theme {
     display: flex;
     justify-content: center;
@@ -217,11 +268,15 @@ img {
     color: var(--accent-color);
     background-color: var(--dark-color);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
 .topKey {
     color: var(--secondary-color);
 }
 
+<<<<<<< HEAD
 .emptyKey {
     cursor: unset;
 }
@@ -231,6 +286,8 @@ img {
     color: transparent;
 }
 
+=======
+>>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
 .numInput {
     border: none;
     outline: none;
@@ -280,6 +337,7 @@ img {
     position: absolute;
 }
 
+<<<<<<< HEAD
 
 /*------ light theme -----*/
 
@@ -287,10 +345,16 @@ img {
 .light__theme .phone__top,
 .light__theme .theme,
 .light__theme .phone__bar {
+=======
+/*------ light theme -----*/
+
+.light__theme .phone, .light__theme .phone__top, .light__theme .theme, .light__theme .phone__bar {
+>>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
     background-color: var(--primary-color-2);
     color: var(--dark-color);
 }
 
+<<<<<<< HEAD
 .light__theme .phone__bottom,
 .light__theme .phone__line {
     background-color: var(--light-color-2);
@@ -301,16 +365,26 @@ img {
     color: var(--dark-color);
 }
 
+=======
+.light__theme .phone__bottom, .light__theme .phone__line {
+    background-color: var(--light-color-2);
+}
+
+>>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
 .light__theme .numInput::placeholder {
     color: var(--dark-color);
 }
 
+<<<<<<< HEAD
 .light__theme .calInput::placeholder {
     color: var(--dark-color-2);
 }
 
 .light__theme .theme__box,
 .light__theme .mainKey {
+=======
+.light__theme .theme__box, .light__theme .mainKey {
+>>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
     background-color: var(--dark-color-2);
 }
 
@@ -319,6 +393,7 @@ img {
     border-radius: var(--border-raduis-lg);
     color: var(--light-color);
 }
+<<<<<<< HEAD
 
 .light__theme .btn__light {
     color: var(--light-color)
@@ -337,3 +412,5 @@ img {
         width: 40%
     }
 }
+=======
+>>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
