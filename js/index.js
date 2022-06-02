@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 document.querySelector(".light__mood").addEventListener("click", function() {
     document.querySelector("html").classList.add("light__theme");
 });
 document.querySelector(".dark__mood").addEventListener("click", function() {
-=======
-
-document.querySelector(".light__mood").addEventListener("click", function () {
-    document.querySelector("html").classList.add("light__theme");
-});
-document.querySelector(".dark__mood").addEventListener("click", function () {
->>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
     document.querySelector("html").classList.remove("light__theme");
 });
 
@@ -76,21 +68,12 @@ function clock() {
     minutes = (minutes < 10 ? "0" : "") + minutes;
     seconds = (seconds < 10 ? "0" : "") + seconds;
 
-<<<<<<< HEAD
-    document.getElementById("clock__hour").textContent = hours + ":";
-    document.getElementById("clock__minute").textContent = minutes + ":";
-=======
     document.getElementById("clock__hour").textContent = hours;
     document.getElementById("clock__minute").textContent = minutes;
->>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
     document.getElementById("clock__second").textContent = seconds;
     document.getElementById("clock__divider").textContent = divider;
 
     setTimeout(clock, 1000);
 }
 
-<<<<<<< HEAD
 clock();
-=======
-clock();
->>>>>>> d6f7d24047ea20e001d59a2d2dd322fc1b6002c9
