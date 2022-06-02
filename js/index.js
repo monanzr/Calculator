@@ -22,6 +22,7 @@ numberKeys.forEach((element) => {
     element.addEventListener("click", () => {
         numInput.value += element.textContent;
         calInput.value += element.textContent;
+        decimalAllowed = true;
     });
 });
 
@@ -38,14 +39,12 @@ operatorKey.forEach((operator) => {
     operator.addEventListener("click", () => {
         calInput.value += operator.textContent;
         numInput.value = "";
-        decimalAllowed = true;
     });
 });
 
 percentageKey.addEventListener("click", () => {
     calInput.value = calInput.value / 100;
     numInput.value = numInput.value / 100;
-    calInput.value = "";
 })
 
 signKey.addEventListener("click", () => {
