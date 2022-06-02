@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="assests/img/07_icon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <title>Calculator</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@500;700;900&amp;display=swap" rel="stylesheet">
 
 </head>
 
@@ -16,14 +18,34 @@
 
     <main>
         <section class="phone">
-            <div class="phone__bar">9:00AM</div>
+            <div class="phone__bar">
+                <div class="bar__clock">
+                    <span id="clock__hour"></span>
+                    <span id="clock__minute"></span>
+                    <span id="clock__second"></span>
+                    <span id="clock__divider"></span>
+                </div>
+                <div class="bar__notch"></div>
+                <div class="bar__icon">
+                    <div class="signal"><i class="fas fa-signal"></i></div>
+                    <div class="wifi"><i class="fas fa-wifi"></i></div>
+                    <div class="battery"><i class="fas fa-battery-full"></i></div>
+                </div>
+            </div>
+            <div class="theme">
+                <div class="theme__box">
+                    <a href="#" class="light__mood"><i class="far fa-sun btn__light"></i></a>
+                    <a href="#" class="dark__mood"><i class="far fa-moon btn__dark"></i></a>
+                </div>
+            </div>
             <div class="phone__top">
                 <input type="text" class="calInput" placeholder="0">
+                <input type="text" class="numInput" placeholder="0">
             </div>
             <div class="phone__bottom">
-                <button class="btn mainKey cleanKey">C</button>
-                <button class="btn mainKey signKey">+/-</button>
-                <button class="btn mainKey percentageKey">%</button>
+                <button class="btn mainKey cleanKey topKey">C</button>
+                <button class="btn mainKey signKey topKey">+/-</button>
+                <button class="btn mainKey percentageKey topKey">%</button>
                 <button class="btn mainKey operatorKey">/</button>
                 <button class="btn numberKey">7</button>
                 <button class="btn numberKey">8</button>
@@ -37,12 +59,12 @@
                 <button class="btn numberKey">2</button>
                 <button class="btn numberKey">3</button>
                 <button class="btn mainKey operatorKey">+</button>
-                <button class="btn mainKey"></button>
+                <button class="btn emptyKey"></button>
                 <button class="btn numberKey">0</button>
                 <button class="btn numberKey">.</button>
                 <button class="btn mainKey resultKey">=</button>
-
             </div>
+            <div class="phone__line"></div>
         </section>
     </main>
 
