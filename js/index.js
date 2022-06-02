@@ -68,8 +68,8 @@ function clock() {
     minutes = (minutes < 10 ? "0" : "") + minutes;
     seconds = (seconds < 10 ? "0" : "") + seconds;
 
-    document.getElementById("clock__hour").textContent = hours;
-    document.getElementById("clock__minute").textContent = minutes;
+    document.getElementById("clock__hour").textContent = hours + ":";
+    document.getElementById("clock__minute").textContent = minutes + ":";
     document.getElementById("clock__second").textContent = seconds;
     document.getElementById("clock__divider").textContent = divider;
 
